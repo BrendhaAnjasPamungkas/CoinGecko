@@ -1,10 +1,8 @@
-
-
 import 'package:blockchain/app/domain/entities/coin.dart';
 import 'package:blockchain/app/domain/usecase/get_market_coins_usecase.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:blockchain/app/injection.dart';
+import 'package:blockchain/injection.dart';
 
 class HomeController extends GetxController {
   GetMarketCoinsUsecase homeUse = sl<GetMarketCoinsUsecase>();

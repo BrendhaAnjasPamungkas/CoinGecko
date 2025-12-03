@@ -1,5 +1,3 @@
-
-
 import 'package:blockchain/app/domain/entities/coin.dart';
 
 class CoinModel {
@@ -8,7 +6,7 @@ class CoinModel {
   final String symbol;
   final String image;
   final String currentPrice;
-  final String priceChangePercentage24h;
+  final double priceChangePercentage24h;
 
   CoinModel({
     required this.id,
@@ -26,7 +24,8 @@ class CoinModel {
       symbol: json["symbol"],
       image: json["image"].toString(),
       currentPrice: json["current_price"].toString(),
-      priceChangePercentage24h: json["price_change_percentage_24h"].toString(),
+      priceChangePercentage24h:
+          (json['price_change_percentage_24h'] as num?)?.toDouble() ?? 0.0,
     );
   }
 

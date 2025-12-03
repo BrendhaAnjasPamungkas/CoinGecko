@@ -5,12 +5,14 @@ import '../repositories/coin_repository.dart';
 
 class GetMarketCoinsUsecase {
   final CoinRepository repository;
+  
   GetMarketCoinsUsecase(this.repository);
 
-  Future<List<Coin>> call(){
+  Future<List<Coin>> call() {
     return repository.getMarketCoins();
   }
-   Future<List<Search>> getSearch(String value){
+
+  Future<List<Search>> call2(String value) {
     return repository.getSearch(value);
   }
 }

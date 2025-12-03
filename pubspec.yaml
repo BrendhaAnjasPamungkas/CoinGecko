@@ -39,6 +39,14 @@ dependencies:
   get: ^4.7.2
   get_it: ^8.2.0
   google_fonts: ^6.3.2
+  firebase_core: ^4.2.0
+  firebase_auth: ^6.1.1
+  cloud_firestore: ^6.0.3
+  intl: ^0.20.2
+  fl_chart: ^1.1.1
+  flutter_launcher_icons: ^0.14.4
+
+  # --- TAMBAHKAN BLOK KONFIGURASI INI DI BAWAH ---
 
 dev_dependencies:
   flutter_test:
@@ -63,8 +71,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -92,3 +100,16 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_launcher_icons:
+  # Tentukan platform mana yang ingin kamu ubah ikonnya
+  android: true
+  ios: true
+
+  # Tentukan path ke gambar ikon utama kamu
+  image_path: "assets/icons.png"
+
+  # (Opsional) Jika ikon kamu sudah ada lingkaran transparan
+  # dan kamu tidak ingin Android menambahkan lingkaran putih:
+  adaptive_icon_background: "#0f172a" # Ganti dengan warna background kamu
+  adaptive_icon_foreground: "assets/icons.png" # Path ke ikon lagi
+

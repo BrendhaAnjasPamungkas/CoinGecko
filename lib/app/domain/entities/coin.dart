@@ -4,7 +4,7 @@ class Coin {
   final String symbol;
   final String image;
   final String currentPrice;
-  final String priceChangePercentage24h;
+  final double priceChangePercentage24h;
 
   Coin({
     required this.id,

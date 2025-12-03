@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "295152563636",
+    "project_id": "coingecko-bc7d0",
+    "storage_bucket": "coingecko-bc7d0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295152563636:android:9cba0fd5b5a0391260eee1",
+        "android_client_info": {
+          "package_name": "com.example.blockchain"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2PBdnuTW03dw-VFenF4Nc6U-zxx5QmKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

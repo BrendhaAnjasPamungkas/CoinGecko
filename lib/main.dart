@@ -1,12 +1,19 @@
-import 'package:blockchain/app/injection.dart';
-import 'package:blockchain/app/presentation/views/home_view.dart';
+import 'package:blockchain/app/presentation/views/login_view.dart';
+import 'package:blockchain/firebase_options.dart';
+import 'package:blockchain/injection.dart';
+
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  setup();
-  runApp(const MyApp());
+  FlutterError.onError = (FlutterErrorDetails details) {
+    FlutterError.dumpErrorToConsole(details);
+  };
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  setup(); // Dependency injection setup
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,11 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: HomeView(),
+      home: LoginView(), // Halaman login sebagai halaman utama
     );
   }
 }
